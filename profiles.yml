@@ -1,0 +1,10 @@
+dbt_learning:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: swift-surf-418317
+      dataset: "{{ env_var('DBT_DBNAME', 'dbt_dw') }}"
+      threads: 4 # Must be a value of 1 or greater
+      keyfile: /Users/fernando.junior/projects/personal/dbt_learning/credentials/bigquery-sc-credentials.json

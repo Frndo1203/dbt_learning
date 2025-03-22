@@ -5,3 +5,4 @@ dbt_packages/
 logs/
 credentials/*
 uv.lock
+.env
